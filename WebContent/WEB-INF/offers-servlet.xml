@@ -16,4 +16,6 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 
+	<mvc:resources location="/resources/" mapping="/static/**" />
+
 </beans>

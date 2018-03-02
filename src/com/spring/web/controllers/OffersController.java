@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.spring.web.dao.Offer;
 import com.spring.web.service.OffersService;
@@ -20,20 +21,21 @@ public class OffersController {
 	public String showOffers(Model model) {
 
 		List<Offer> offers = offersService.getCurrent();
-
 		model.addAttribute("offers", offers);
 
 		return "offers";
 	}
-	
+
 	@RequestMapping("/createoffer")
 	public String createOffer() {
 
 		return "createoffer";
 	}
-	
-	@RequestMapping(value = "/docreate")
-	public String doCreate() {
+
+	@RequestMapping(value = "/docreate", method = RequestMethod.POST)
+	public String doCreate(Model model, Offer offer) {
+		
+		System.out.println(offer);
 
 		return "offercreated";
 	}

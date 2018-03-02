@@ -3,29 +3,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
+<link href="${pageContext.request.contextPath}/static/css/main.css"
+	rel="stylesheet" type="text/css" />
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
 
-	<form method="get" action="${pageContext.request.contextPath}/docreate">
+	<form method="post"
+		action="${pageContext.request.contextPath}/docreate">
 
-		<table>
+		<table class="formtable">
 			<tr>
-				<td>Name:</td>
-				<td><input name="name" type="text" /></td>
+				<td class="label">Name:</td>
+				<td><input class="control" name="name" type="text" /></td>
 			</tr>
 			<tr>
-				<td>Email:</td>
-				<td><input name="email" type="text" /></td>
+				<td class="label">Email:</td>
+				<td><input class="control" name="email" type="text" /></td>
 			</tr>
 			<tr>
-				<td>Your offer:</td>
-				<td><textarea rows="10" cols="10"></textarea></td>
+				<td class="label">Your offer:</td>
+				<td><textarea class="control" name="text" rows="10" cols="10"></textarea></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td><input value="Create advert" type="submit" /></td>
+				<td class="label"></td>
+				<td><input class="control" value="Create advert" type="submit" /></td>
 			</tr>
 		</table>
 
