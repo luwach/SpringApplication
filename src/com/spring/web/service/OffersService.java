@@ -2,6 +2,8 @@ package com.spring.web.service;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +18,9 @@ public class OffersService {
 
 	public List<Offer> getCurrent() {
 		return offersDao.getOffers();
+	}
+
+	public void create(@Valid Offer offer) {
+		offersDao.create(offer);
 	}
 }
