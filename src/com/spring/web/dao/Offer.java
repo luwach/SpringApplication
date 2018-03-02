@@ -1,8 +1,9 @@
 package com.spring.web.dao;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
+import com.spring.web.validation.ValidEmail;
 
 public class Offer {
 
@@ -12,7 +13,7 @@ public class Offer {
 	private String name;
 	
 	@NotNull
-	@Pattern(regexp=".*\\@.*\\..*", message="This does not appear to be a valid email address")
+	@ValidEmail
 	private String email;
 	
 	@Size(min=5, max=100, message="Text must be between 20 and 255 characters.")
