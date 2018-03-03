@@ -8,7 +8,6 @@
 
 input[type=text] {
 	width: 250px;
-	
 }
 
 textarea {
@@ -37,5 +36,5 @@ table.offers {
 }
 
 p.error {
-	color: red;
+	font-size: medium;
 }
