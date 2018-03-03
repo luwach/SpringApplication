@@ -39,7 +39,7 @@
 			</tr>
 			<tr>
 				<td class="label"></td>
-				<td><input class="control" value="Create advert" type="submit" /></td>
+				<td><input class="control" value="Create account" type="submit" /></td>
 			</tr>
 		</table>
 
