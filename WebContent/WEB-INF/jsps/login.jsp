@@ -22,8 +22,7 @@
 	</c:if>
 
 	<form name='f'
-		action='${pageContext.request.contextPath}/j_spring_security_check'
-		method='POST'>
+		action='${pageContext.request.contextPath}/j_spring_security_check' method='POST'>
 		<table class="formtable">
 			<tr>
 				<td>User:</td>
@@ -34,8 +33,11 @@
 				<td><input type='password' name='j_password' /></td>
 			</tr>
 			<tr>
-				<td colspan='2'><input name="submit" type="submit"
-					value="Login" /></td>
+				<td>Remember me:</td>
+				<td><input type='checkbox' name='_spring_security_remember_me' checked="checked" /></td>
+			</tr>
+			<tr>
+				<td colspan='2'><input name="submit" type="submit" value="Login" /></td>
 			</tr>
 		</table>
 	</form>
