@@ -21,18 +21,6 @@
 			offer</a>
 	</p>
 
-	<sec:authorize access="!isAuthenticated()">
-		<p>
-			<a href="<c:url value='/login'/>">Log in</a>
-		</p>
-	</sec:authorize>
-
-	<sec:authorize access="isAuthenticated()">
-		<p>
-			<a href="<c:url value='/j_spring_security_logout'/>">Log out</a>
-		</p>
-	</sec:authorize>
-
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
 		<p>
 			<a href="<c:url value='/admin'/>">Admin</a>

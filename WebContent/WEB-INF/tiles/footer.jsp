@@ -1,1 +1,1 @@
-<p>Footer goes here.</p>
+Created by Lukasz Wachowski
